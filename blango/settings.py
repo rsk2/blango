@@ -42,6 +42,7 @@ class Dev(Configuration):
         'django.contrib.sessions',
         'django.contrib.messages',
         'django.contrib.staticfiles',
+        "crispy_forms",
         "blango_auth",
         'blog',
         "debug_toolbar"
@@ -164,6 +165,8 @@ class Dev(Configuration):
             "level": "DEBUG",
         },
     }
+    EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+    ACCOUNT_ACTIVATION_DAYS = 7
 
 
 
